@@ -1,0 +1,443 @@
+import { useEffect, useState } from 'react'
+import './App.css'
+
+function App() {
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-animate]')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.35 }
+    )
+
+    elements.forEach((element) => observer.observe(element))
+    return () => observer.disconnect()
+  }, [])
+
+  const [activeProject, setActiveProject] = useState(null)
+
+  useEffect(() => {
+    if (!activeProject) {
+      document.body.style.removeProperty('overflow')
+      return
+    }
+
+    document.body.style.overflow = 'hidden'
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setActiveProject(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      document.body.style.removeProperty('overflow')
+    }
+  }, [activeProject])
+
+  const projects = [
+    {
+      title: 'Casa Horizonte',
+      type: 'Residencial Privada',
+      location: 'Valle de Bravo, MX',
+      description:
+        'Líneas puras y concreto mineral dialogan con la luz natural para crear un refugio contemplativo.',
+      image:
+        'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80',
+      descriptionLong:
+        'Una residencia monolítica que se posa sobre el paisaje boscoso de Valle de Bravo. Los planos de concreto aparente y madera termoformada generan patios habitables que enmarcan vistas, mientras un espejo de agua refleja el cielo y ayuda a regular la temperatura. Cada volumen se diseñó para que la luz recorra los espacios de forma gradual durante el día.',
+      gallery: [
+        'https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1469406396016-013bfae5d83e?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+      ],
+      quote:
+        'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes bajo la luz.',
+      quoteAuthor: 'Le Corbusier',
+    },
+    {
+      title: 'Galería Origen',
+      type: 'Espacio Cultural',
+      location: 'Ciudad de México',
+      description:
+        'Una piel de vidrio templado que respira y transforma la relación entre interior y exterior.',
+      image:
+        'https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1600&q=80',
+      descriptionLong:
+        'Galería Origen es un contenedor cultural que utiliza capas traslúcidas y patios interiores para generar un recorrido museográfico cambiante. La estructura principal de acero se oculta tras un doble cristal con velos textiles que filtran la luz y permiten proyectar piezas visuales a gran escala durante las noches.',
+      gallery: [
+        'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
+      ],
+      quote:
+        'La arquitectura es la voluntad de una época traducida al espacio.',
+      quoteAuthor: 'Ludwig Mies van der Rohe',
+    },
+    {
+      title: 'Torre Lumen',
+      type: 'Usos Mixtos',
+      location: 'Monterrey, MX',
+      description:
+        'Estructura escultórica con brise-soleil dinámicos que generan un juego de sombras cambiante.',
+      image:
+        'https://images.unsplash.com/photo-1496305151957-541f48b77c1a?auto=format&fit=crop&w=1600&q=80',
+      descriptionLong:
+        'Complejo de oficinas, residencias y terraza pública que reinterpreta la verticalidad regiomontana. La torre utiliza un sistema de brise-soleil cinéticos que responden al asoleamiento en tiempo real, reduciendo el consumo energético y dotando a la fachada de un movimiento sutil permanente.',
+      gallery: [
+        'https://images.unsplash.com/photo-1499916078039-922301b0eb9b?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=80',
+      ],
+      quote:
+        'La simplicidad es la clave de la verdadera elegancia en la arquitectura.',
+      quoteAuthor: 'Tadao Ando',
+    },
+  ]
+
+  const services = [
+    {
+      title: 'Arquitectura a medida',
+      description:
+        'Proyectos residenciales y comerciales con un enfoque integral que mezcla contexto, función y estética atemporal.',
+    },
+    {
+      title: 'Dirección de obra',
+      description:
+        'Gestión ejecutiva con presencia en sitio, cuidando cada detalle constructivo y la fidelidad al concepto original.',
+    },
+    {
+      title: 'Consultoría de marca espacial',
+      description:
+        'Creación de experiencias arquitectónicas que amplifican el valor y la narrativa de marcas premium.',
+    },
+  ]
+
+  return (
+    <div className="page">
+      <header className="top-bar">
+        <div className="brand">
+          <span className="brand-mark" />
+          <span className="brand-name">Juan García</span>
+          <span className="brand-role">Arquitecto</span>
+        </div>
+        <nav className="nav-links">
+          <a href="#portfolio">Proyectos</a>
+          <a href="#studio">Estudio</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </header>
+
+      <main>
+        <section className="hero">
+          <div className="hero-grid">
+            <div className="hero-intro" data-animate="fade-right">
+              <p className="hero-kicker">Estudio en Tijuana · Baja California</p>
+              <h1>
+                Espacios que celebran la luz, la calma y la materia en su
+                estado más puro.
+              </h1>
+              <p className="hero-copy">
+                Juan García diseña proyectos icónicos desde Tijuana, Baja
+                California, para clientes que buscan una arquitectura con
+                precisión técnica, narrativa poética y una estética atemporal
+                inspirada en la naturaleza.
+              </p>
+              <div className="hero-actions">
+                <a className="primary" href="#portfolio">
+                  Ver portafolio
+                </a>
+                <a className="secondary" href="#contact">
+                  Solicitar consulta
+                </a>
+              </div>
+            </div>
+            <div className="hero-visual" data-animate="fade-left">
+              <div className="hero-image">
+                <div className="hero-image__overlay" />
+                <div className="hero-stats">
+                  <p>
+                    10 años creando arquitectura escultural y funcional con
+                    presencia en el noroeste de México y la costa oeste de los
+                    Estados Unidos.
+                  </p>
+                  <div className="hero-stat-row">
+                    <span className="hero-stat-value">10</span>
+                    <span className="hero-stat-label">años de trayectoria</span>
+                  </div>
+                  <div className="hero-stat-row">
+                    <span className="hero-stat-value">8</span>
+                    <span className="hero-stat-label">
+                      reconocimientos clave
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="studio" className="studio">
+          <div className="section-header" data-animate="fade-right">
+            <span className="section-tag">Estudio</span>
+            <h2>Un proceso curado, sensible e impecable en cada fase.</h2>
+          </div>
+          <div className="studio-layout">
+            <div className="studio-gallery" data-animate="scale-in">
+              <div
+                className="studio-gallery__primary"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=1400&q=80')",
+                }}
+              />
+              <div className="studio-gallery__stack">
+                <div
+                  className="studio-gallery__item"
+                  style={{
+                    backgroundImage:
+                      "url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80')",
+                  }}
+                />
+                <div
+                  className="studio-gallery__item"
+                  style={{
+                    backgroundImage:
+                      "url('https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=900&q=80')",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="studio-content" data-animate="fade-left">
+              <p>
+                El estudio integra arquitectura, interiorismo y estrategia
+                experiencial. Cada proyecto inicia con una inmersión profunda en
+                el sitio y el estilo de vida del cliente. El resultado es un
+                lenguaje espacial que respira, dialoga con el entorno y utiliza
+                materiales honestos para expresar lujo silencioso.
+              </p>
+              <div className="studio-pillars">
+                <div>
+                  <span>01</span>
+                  <h3>Contexto</h3>
+                  <p>
+                    Lectura precisa del paisaje, la luz y el clima para insertar
+                    la arquitectura con respeto y carácter.
+                  </p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <h3>Materialidad</h3>
+                  <p>
+                    Selección de materiales nobles con acabados táctiles y
+                    tonalidades que envejecen con dignidad.
+                  </p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <h3>Experiencia</h3>
+                  <p>
+                    Secuencias espaciales que coreografían la luz, el silencio y
+                    el movimiento para generar emociones memorables.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" className="portfolio">
+          <div className="section-header" data-animate="fade-right">
+            <span className="section-tag">Portafolio</span>
+            <h2>Arquitectura icónica con una estética minimalista y radical.</h2>
+          </div>
+          <div className="project-grid">
+            {projects.map((project) => (
+              <article key={project.title} className="project-card" data-animate="fade-up">
+                <div
+                  className="project-image"
+                  style={{ backgroundImage: `url(${project.image})` }}
+                />
+                <div className="project-meta">
+                  <div>
+                    <p className="project-type">{project.type}</p>
+                    <h3>{project.title}</h3>
+                  </div>
+                  <p className="project-location">{project.location}</p>
+                </div>
+                <p className="project-description">{project.description}</p>
+                <button type="button" className="project-link" onClick={() => setActiveProject(project)}>
+                  Ver proyecto
+                </button>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="services">
+          <div className="section-header" data-animate="fade-right">
+            <span className="section-tag">Servicios</span>
+            <h2>Una visión integral para proyectos residenciales y de marca.</h2>
+          </div>
+          <div className="services-layout">
+            <div className="services-intro" data-animate="fade-right">
+              <p>
+                Dirigimos cada proyecto con la misma precisión que un atelier.
+                Seleccionamos materiales, proveedores y procesos constructivos
+                para asegurar una ejecución impecable desde la idea hasta la
+                entrega.
+              </p>
+              <ul className="services-scope">
+                <li>Residencias privadas de lujo</li>
+                <li>Hotelería boutique y hospitality premium</li>
+                <li>Espacios comerciales con narrativa de marca</li>
+              </ul>
+            </div>
+            <div className="service-list" data-animate="stagger">
+              {services.map((service, index) => (
+                <div key={service.title} className="service-card">
+                  <div className="service-card__header">
+                    <span className="service-card__index">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <h3>{service.title}</h3>
+                  </div>
+                  <p>{service.description}</p>
+                  <span className="service-card__accent" aria-hidden="true" />
+                </div>
+              ))}
+              <div className="service-card service-card--cta">
+                <p>
+                  Alineamos expectativas, tiempos y presupuesto con una sesión
+                  estratégica inicial.
+                </p>
+                <a className="service-cta" href="#contact">
+                  Agenda una llamada
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="testimonial" data-animate="scale-in">
+          <div className="quote-mark" aria-hidden="true">
+            &ldquo;
+          </div>
+          <blockquote>
+            Ha sido el único despacho capaz de ofrecer una visión total. Cada
+            espacio que diseñan tiene una calma tangible que transforma la forma
+            en que habitamos.
+          </blockquote>
+          <p className="quote-author">Mariana Székely · Coleccionista</p>
+        </section>
+
+        <section id="contact" className="contact">
+          <div className="section-header" data-animate="fade-right">
+            <span className="section-tag">Contacto</span>
+            <h2>Construyamos juntos el próximo landmark.</h2>
+          </div>
+          <div className="contact-grid">
+            <div data-animate="fade-right">
+              <p>
+                Presenta tu proyecto o agenda una llamada exploratoria para
+                comprender tu visión, alcance y expectativas. Respuesta en menos
+                de 48 horas hábiles.
+              </p>
+              <ul className="contact-info">
+                <li>
+                  <span>Email</span>
+                  <a href="mailto:hola@juangarcia.com">
+                    hola@juangarcia.com
+                  </a>
+                </li>
+                <li>
+                  <span>Teléfono</span>
+                  <a href="tel:+525512345678">+52 55 1234 5678</a>
+                </li>
+                <li>
+                  <span>Estudio</span>
+                  <p>Av. Paseo de los Héroes 100, Zona Río · Tijuana, Baja California</p>
+                </li>
+              </ul>
+            </div>
+            <form className="contact-form" data-animate="fade-left">
+              <label>
+                Nombre completo
+                <input type="text" name="name" placeholder="Tu nombre" />
+              </label>
+              <label>
+                Correo electrónico
+                <input type="email" name="email" placeholder="nombre@mail.com" />
+              </label>
+              <label>
+                Mensaje
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Cuéntanos sobre tu idea"
+                />
+              </label>
+              <button type="submit">Enviar propuesta</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} Estudio Juan García. Todos los derechos reservados.</p>
+        <div className="footer-links">
+          <a href="#studio">Manifiesto</a>
+          <a href="#portfolio">Colección</a>
+          <a href="#contact">Agenda</a>
+        </div>
+      </footer>
+
+      {activeProject && (
+        <div className="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+          <div className="project-modal__backdrop" onClick={() => setActiveProject(null)} />
+          <div className="project-modal__content">
+            <div className="project-modal__header">
+              <div>
+                <span className="project-modal__type">{activeProject.type}</span>
+                <h3 id="project-modal-title">{activeProject.title}</h3>
+                <p className="project-modal__location">{activeProject.location}</p>
+              </div>
+              <button
+                type="button"
+                className="project-modal__close"
+                onClick={() => setActiveProject(null)}
+                aria-label="Cerrar proyecto"
+              >
+                Cerrar
+              </button>
+            </div>
+            <p className="project-modal__description">{activeProject.descriptionLong}</p>
+            <div className="project-modal__gallery">
+              {activeProject.gallery.map((image, index) => (
+                <div
+                  key={image}
+                  className="project-modal__image"
+                  style={{ backgroundImage: `url(${image})` }}
+                  aria-label={`${activeProject.title} imagen ${index + 1}`}
+                />
+              ))}
+            </div>
+            <blockquote className="project-modal__quote">
+              “{activeProject.quote}”
+              <cite>— {activeProject.quoteAuthor}</cite>
+            </blockquote>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default App
