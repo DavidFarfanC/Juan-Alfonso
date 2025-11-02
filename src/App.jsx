@@ -44,38 +44,38 @@ function App() {
 
   const projects = [
     {
-      title: 'Casa Horizonte',
-      type: 'Residencial Privada',
-      location: 'Valle de Bravo, MX',
+      title: 'VIÑA EMILIA',
+      type: 'VINICOLA | CAVA | COCINA | B&B',
+      location: 'Ensenada, MX',
       description:
         'Líneas puras y concreto mineral dialogan con la luz natural para crear un refugio contemplativo.',
       image:
-        'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=80',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065083/Captura_de_pantalla_2025-11-01_a_la_s_11.31.14_p.m._jaomtu.png',
       descriptionLong:
-        'Una residencia monolítica que se posa sobre el paisaje boscoso de Valle de Bravo. Los planos de concreto aparente y madera termoformada generan patios habitables que enmarcan vistas, mientras un espejo de agua refleja el cielo y ayuda a regular la temperatura. Cada volumen se diseñó para que la luz recorra los espacios de forma gradual durante el día.',
+        'Una residencia monolítica que se posa sobre el paisaje. Los planos de concreto aparente y madera termoformada generan patios habitables que enmarcan vistas, mientras un espejo de agua refleja el cielo y ayuda a regular la temperatura. Cada volumen se diseñó para que la luz recorra los espacios de forma gradual durante el día.',
       gallery: [
-        'https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1469406396016-013bfae5d83e?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065142/Captura_de_pantalla_2025-11-01_a_la_s_11.32.14_p.m._pqrfcm.png',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065157/Captura_de_pantalla_2025-11-01_a_la_s_11.32.32_p.m._ookwh6.png',
+        'https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071',
       ],
       quote:
-        'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes bajo la luz.',
-      quoteAuthor: 'Le Corbusier',
+        'La "poesía" más poderosa de los arquitectos tiende a venir en forma construida, hay quienes usan papel y lapiz para articular su pasión, orgullo o incluso desesperación en relación con el diseño',
+      quoteAuthor: 'Juan G.',
     },
     {
-      title: 'Galería Origen',
-      type: 'Espacio Cultural',
-      location: 'Ciudad de México',
+      title: 'ARQUITECTURA SUSTENTABLE',
+      type: 'MODERNA | CULTURAL | TRANSPARENTE',
+      location: 'VALLE DE GUADALUPE, BC',
       description:
         'Una piel de vidrio templado que respira y transforma la relación entre interior y exterior.',
       image:
-        'https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1600&q=80',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065696/Captura_de_pantalla_2025-11-01_a_la_s_11.41.29_p.m._zfzjkb.png',
       descriptionLong:
         'Galería Origen es un contenedor cultural que utiliza capas traslúcidas y patios interiores para generar un recorrido museográfico cambiante. La estructura principal de acero se oculta tras un doble cristal con velos textiles que filtran la luz y permiten proyectar piezas visuales a gran escala durante las noches.',
       gallery: [
-        'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065727/Captura_de_pantalla_2025-11-01_a_la_s_11.41.49_p.m._bzbqvn.png',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065676/Captura_de_pantalla_2025-11-01_a_la_s_11.41.09_p.m._fbymn4.png',
+        'https://images.unsplash.com/photo-1568930157403-9ad464e5f075?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987',
       ],
       quote:
         'La arquitectura es la voluntad de una época traducida al espacio.',
@@ -83,18 +83,18 @@ function App() {
     },
     {
       title: 'Torre Lumen',
-      type: 'Usos Mixtos',
+      type: 'VIVIENDA VERTICAL',
       location: 'Monterrey, MX',
       description:
         'Estructura escultórica con brise-soleil dinámicos que generan un juego de sombras cambiante.',
       image:
-        'https://images.unsplash.com/photo-1496305151957-541f48b77c1a?auto=format&fit=crop&w=1600&q=80',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065970/Captura_de_pantalla_2025-11-01_a_la_s_11.46.04_p.m._bcycmh.png',
       descriptionLong:
         'Complejo de oficinas, residencias y terraza pública que reinterpreta la verticalidad regiomontana. La torre utiliza un sistema de brise-soleil cinéticos que responden al asoleamiento en tiempo real, reduciendo el consumo energético y dotando a la fachada de un movimiento sutil permanente.',
       gallery: [
         'https://images.unsplash.com/photo-1499916078039-922301b0eb9b?auto=format&fit=crop&w=1200&q=80',
         'https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=80',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065970/Captura_de_pantalla_2025-11-01_a_la_s_11.46.04_p.m._bcycmh.png',
       ],
       quote:
         'La simplicidad es la clave de la verdadera elegancia en la arquitectura.',
@@ -124,9 +124,11 @@ function App() {
     <div className="page">
       <header className="top-bar">
         <div className="brand">
-          <span className="brand-mark" />
-          <span className="brand-name">Juan García</span>
-          <span className="brand-role">Arquitecto</span>
+          <img
+            className="brand-logo"
+            src="https://res.cloudinary.com/dkucopkow/image/upload/v1762030349/Copia_de_White_and_Black_Corporate_Architecture_Presentation-removebg-preview_pptpt8.png"
+            alt="Juan García Arquitectura"
+          />
         </div>
         <nav className="nav-links">
           <a href="#portfolio">Proyectos</a>
@@ -139,14 +141,13 @@ function App() {
         <section className="hero">
           <div className="hero-grid">
             <div className="hero-intro" data-animate="fade-right">
-              <p className="hero-kicker">Estudio en Tijuana · Baja California</p>
+              <p className="hero-kicker">Estudio en San Diego · Tijuana · Guadalajara</p>
               <h1>
                 Espacios que celebran la luz, la calma y la materia en su
                 estado más puro.
               </h1>
               <p className="hero-copy">
-                Juan García diseña proyectos icónicos desde Tijuana, Baja
-                California, para clientes que buscan una arquitectura con
+                Juan García diseña proyectos icónicos para clientes que buscan una arquitectura con
                 precisión técnica, narrativa poética y una estética atemporal
                 inspirada en la naturaleza.
               </p>
@@ -195,7 +196,7 @@ function App() {
                 className="studio-gallery__primary"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=1400&q=80')",
+                    "url('https://res.cloudinary.com/dkucopkow/image/upload/v1762064364/Captura_de_pantalla_2025-11-01_a_la_s_11.19.17_p.m._urxxdn.png')",
                 }}
               />
               <div className="studio-gallery__stack">
@@ -203,14 +204,14 @@ function App() {
                   className="studio-gallery__item"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80')",
+                      "url('https://res.cloudinary.com/dkucopkow/image/upload/v1762064729/Captura_de_pantalla_2025-11-01_a_la_s_11.25.23_p.m._acfw9h.png')",
                   }}
                 />
                 <div
                   className="studio-gallery__item"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=900&q=80')",
+                      "url('https://res.cloudinary.com/dkucopkow/image/upload/v1762064654/Captura_de_pantalla_2025-11-01_a_la_s_11.24.07_p.m._szg39i.png')",
                   }}
                 />
               </div>
@@ -346,20 +347,19 @@ function App() {
           <div className="contact-grid">
             <div data-animate="fade-right">
               <p>
-                Presenta tu proyecto o agenda una llamada exploratoria para
-                comprender tu visión, alcance y expectativas. Respuesta en menos
-                de 48 horas hábiles.
+                Soy Juan Alfonso García Serrano, arquitecto con más de 15 años de experiencia en el diseño, desarrollo y supervisión de proyectos residenciales, comerciales e institucionales en México y el extranjero. Me apasiona crear espacios que combinen funcionalidad, estética y sostenibilidad, siempre buscando soluciones prácticas e innovadoras para cada cliente.
+                Además de mi trayectoria profesional, disfruto del automovilismo, especialmente de la Fórmula 1, donde encuentro inspiración en la precisión, la velocidad y el trabajo en equipo. Y, por supuesto, mi yerno favorito es David Farfán.
               </p>
               <ul className="contact-info">
                 <li>
                   <span>Email</span>
-                  <a href="mailto:hola@juangarcia.com">
-                    hola@juangarcia.com
+                  <a href="mailto:jalfonsogs@gmail.com">
+                    jalfonsogs@gmail.com
                   </a>
                 </li>
                 <li>
                   <span>Teléfono</span>
-                  <a href="tel:+525512345678">+52 55 1234 5678</a>
+                  <a href="tel:+523333682559">+52 333 3682559</a>
                 </li>
                 <li>
                   <span>Estudio</span>
