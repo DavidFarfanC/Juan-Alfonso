@@ -46,7 +46,7 @@ function App() {
     {
       title: 'VIÑA EMILIA',
       type: 'VINICOLA | CAVA | COCINA | B&B',
-      location: 'Ensenada, MX',
+      location: 'ENSENADA, BC',
       description:
         'Líneas puras y concreto mineral dialogan con la luz natural para crear un refugio contemplativo.',
       image:
@@ -82,19 +82,19 @@ function App() {
       quoteAuthor: 'Ludwig Mies van der Rohe',
     },
     {
-      title: 'Torre Lumen',
-      type: 'VIVIENDA VERTICAL',
-      location: 'Monterrey, MX',
+      title: 'DICO + SOFANNI',
+      type: 'ARQUITECTURA COMERCIAL',
+      location: 'Guadalajara, JAL',
       description:
         'Estructura escultórica con brise-soleil dinámicos que generan un juego de sombras cambiante.',
       image:
-        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065970/Captura_de_pantalla_2025-11-01_a_la_s_11.46.04_p.m._bcycmh.png',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1763014528/WhatsApp_Image_2025-11-12_at_22.03.49_tmkqod.jpg',
       descriptionLong:
         'Complejo de oficinas, residencias y terraza pública que reinterpreta la verticalidad regiomontana. La torre utiliza un sistema de brise-soleil cinéticos que responden al asoleamiento en tiempo real, reduciendo el consumo energético y dotando a la fachada de un movimiento sutil permanente.',
       gallery: [
-        'https://images.unsplash.com/photo-1499916078039-922301b0eb9b?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1200&q=80',
-        'https://res.cloudinary.com/dkucopkow/image/upload/v1762065970/Captura_de_pantalla_2025-11-01_a_la_s_11.46.04_p.m._bcycmh.png',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1763014665/WhatsApp_Image_2025-11-12_at_22.10.49_1_mh6gc1.jpg',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1763014688/WhatsApp_Image_2025-11-12_at_22.10.49_jzdljr.jpg',
+        'https://res.cloudinary.com/dkucopkow/image/upload/v1763014722/WhatsApp_Image_2025-11-12_at_22.12.18_jirwsm.jpg',
       ],
       quote:
         'La simplicidad es la clave de la verdadera elegancia en la arquitectura.',
@@ -348,7 +348,6 @@ function App() {
             <div data-animate="fade-right">
               <p>
                 Soy Juan Alfonso García Serrano, arquitecto con más de 15 años de experiencia en el diseño, desarrollo y supervisión de proyectos residenciales, comerciales e institucionales en México y el extranjero. Me apasiona crear espacios que combinen funcionalidad, estética y sostenibilidad, siempre buscando soluciones prácticas e innovadoras para cada cliente.
-                Además de mi trayectoria profesional, disfruto del automovilismo, especialmente de la Fórmula 1, donde encuentro inspiración en la precisión, la velocidad y el trabajo en equipo. Y, por supuesto, mi yerno favorito es David Farfán.
               </p>
               <ul className="contact-info">
                 <li>
@@ -360,10 +359,14 @@ function App() {
                 <li>
                   <span>Teléfono</span>
                   <a href="tel:+523333682559">+52 333 3682559</a>
+                  <a href="tel:+526245677941">+52 624 5677941</a>
                 </li>
                 <li>
                   <span>Estudio</span>
-                  <p>Av. Paseo de los Héroes 100, Zona Río · Tijuana, Baja California</p>
+                  <p>
+                    416 W San Ysidro Blvd STE L PMB #1942 <br />
+                    San Ysidro, CA 92173 - 2450 · US
+                  </p>
                 </li>
               </ul>
             </div>
