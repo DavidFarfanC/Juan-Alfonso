@@ -42,6 +42,21 @@ function App() {
     }
   }, [activeProject])
 
+  const handleContactSubmit = (event) => {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const nombre = formData.get('name')?.trim() || 'Sin nombre'
+    const correo = formData.get('email')?.trim() || 'Sin correo'
+    const mensaje = formData.get('message')?.trim() || 'Sin mensaje'
+
+    const text = `Hola, me gustaría una propuesta.\n\nNombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${mensaje}`
+    const phone = '523333682559'
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`
+
+    window.open(url, '_blank', 'noopener,noreferrer')
+    event.currentTarget.reset()
+  }
+
   const projects = [
     {
       title: 'VIÑA EMILIA',
@@ -400,7 +415,12 @@ function App() {
                 </li>
               </ul>
             </div>
-            <form className="contact-form" data-animate="fade-left">
+            <form
+              id="contactForm"
+              className="contact-form"
+              data-animate="fade-left"
+              onSubmit={handleContactSubmit}
+            >
               <label>
                 Nombre completo
                 <input type="text" name="name" placeholder="Tu nombre" />
