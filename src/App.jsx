@@ -48,11 +48,11 @@ function App() {
       type: 'VINICOLA | CAVA | COCINA | B&B',
       location: 'ENSENADA, BC',
       description:
-        'Líneas puras y concreto mineral dialogan con la luz natural para crear un refugio contemplativo.',
+        'Un refugio en el Valle de Ensenada donde la arquitectura dialoga con la tierra, el vino y el atardecer.',
       image:
         'https://res.cloudinary.com/dkucopkow/image/upload/v1762065083/Captura_de_pantalla_2025-11-01_a_la_s_11.31.14_p.m._jaomtu.png',
       descriptionLong:
-        'Una residencia monolítica que se posa sobre el paisaje. Los planos de concreto aparente y madera termoformada generan patios habitables que enmarcan vistas, mientras un espejo de agua refleja el cielo y ayuda a regular la temperatura. Cada volumen se diseñó para que la luz recorra los espacios de forma gradual durante el día.',
+        'El proyecto combina piedra local, madera y teja tradicional para crear un volumen acogedor que se integra con el entorno agrícola. Los accesos enmarcan la llegada desde los viñedos y conducen a terrazas y estancias exteriores diseñadas para la convivencia. La cava y los espacios gastronómicos se vinculan visualmente con los patios, mientras que la volumetría busca capturar la luz del valle y mantener una temperatura interior estable. La arquitectura responde al clima mediterráneo de Ensenada con materiales durables y una espacialidad serena pensada para recibir al visitante.',
       gallery: [
         'https://res.cloudinary.com/dkucopkow/image/upload/v1762065142/Captura_de_pantalla_2025-11-01_a_la_s_11.32.14_p.m._pqrfcm.png',
         'https://res.cloudinary.com/dkucopkow/image/upload/v1762065157/Captura_de_pantalla_2025-11-01_a_la_s_11.32.32_p.m._ookwh6.png',
@@ -64,14 +64,14 @@ function App() {
     },
     {
       title: 'ARQUITECTURA SUSTENTABLE',
-      type: 'MODERNA | CULTURAL | TRANSPARENTE',
+      type: 'MODERNA | SUSTENTABILIDAD | TRANSPARENTE',
       location: 'VALLE DE GUADALUPE, BC',
       description:
-        'Una piel de vidrio templado que respira y transforma la relación entre interior y exterior.',
+        'Un pabellón contemporáneo que se eleva sobre el paisaje del Valle de Guadalupe para contemplarlo sin invadirlo.',
       image:
         'https://res.cloudinary.com/dkucopkow/image/upload/v1762065696/Captura_de_pantalla_2025-11-01_a_la_s_11.41.29_p.m._zfzjkb.png',
       descriptionLong:
-        'Galería Origen es un contenedor cultural que utiliza capas traslúcidas y patios interiores para generar un recorrido museográfico cambiante. La estructura principal de acero se oculta tras un doble cristal con velos textiles que filtran la luz y permiten proyectar piezas visuales a gran escala durante las noches.',
+        'El proyecto se apoya sobre una estructura elevada que permite minimizar el impacto en el terreno y maximiza la ventilación natural. Los volúmenes se resuelven con acero expuesto, paneles de madera y grandes cristales que abren el espacio hacia las montañas y viñedos. La terraza frontal funciona como mirador, mientras que el interior se articula mediante materiales cálidos y techos altos que integran iluminación tenue. Su diseño apuesta por eficiencia térmica, construcción ligera y una relación directa con el paisaje, alineándose con principios de arquitectura sustentable.',
       gallery: [
         'https://res.cloudinary.com/dkucopkow/image/upload/v1762065727/Captura_de_pantalla_2025-11-01_a_la_s_11.41.49_p.m._bzbqvn.png',
         'https://res.cloudinary.com/dkucopkow/image/upload/v1762065676/Captura_de_pantalla_2025-11-01_a_la_s_11.41.09_p.m._fbymn4.png',
@@ -84,13 +84,13 @@ function App() {
     {
       title: 'DICO + SOFANNI',
       type: 'ARQUITECTURA COMERCIAL',
-      location: 'Guadalajara, JAL',
+      location: 'GDL, JAL',
       description:
-        'Estructura escultórica con brise-soleil dinámicos que generan un juego de sombras cambiante.',
+        'Un showroom contemporáneo que combina amplitud, luz y transparencia para exhibir el diseño interior como una experiencia inmersiva.',
       image:
         'https://res.cloudinary.com/dkucopkow/image/upload/v1763014528/WhatsApp_Image_2025-11-12_at_22.03.49_tmkqod.jpg',
       descriptionLong:
-        'Complejo de oficinas, residencias y terraza pública que reinterpreta la verticalidad regiomontana. La torre utiliza un sistema de brise-soleil cinéticos que responden al asoleamiento en tiempo real, reduciendo el consumo energético y dotando a la fachada de un movimiento sutil permanente.',
+        'El proyecto integra dos firmas de mobiliario en un volumen comercial de doble altura que prioriza la visibilidad y el flujo interior. La fachada principal se resuelve con grandes paños de vidrio y marcos metálicos que maximizan la entrada de luz natural y generan una presencia urbana clara. En el interior, la espacialidad se organiza mediante líneas de iluminación geométrica en el plafón, recorridos amplios y áreas de exhibición que permiten una lectura coherente del mobiliario. El diseño busca crear una experiencia comercial cálida, ordenada y visualmente fluida para el visitante.',
       gallery: [
         'https://res.cloudinary.com/dkucopkow/image/upload/v1763014665/WhatsApp_Image_2025-11-12_at_22.10.49_1_mh6gc1.jpg',
         'https://res.cloudinary.com/dkucopkow/image/upload/v1763014688/WhatsApp_Image_2025-11-12_at_22.10.49_jzdljr.jpg',
@@ -218,11 +218,11 @@ function App() {
             </div>
             <div className="studio-content" data-animate="fade-left">
               <p>
-                El estudio integra arquitectura, interiorismo y estrategia
-                experiencial. Cada proyecto inicia con una inmersión profunda en
-                el sitio y el estilo de vida del cliente. El resultado es un
-                lenguaje espacial que respira, dialoga con el entorno y utiliza
-                materiales honestos para expresar lujo silencioso.
+                Nuestra filosofía parte de comprender la arquitectura como un diálogo 
+                sensible entre luz, materia y vida cotidiana. Creemos en los espacios 
+                que respiran, que se integran con su entorno y que evolucionan con quienes los habitan.
+                Cada decisión se guía por la honestidad de los materiales, la calma
+                en las formas y una estética que expresa un lujo silencioso, cálido y profundamente humano.
               </p>
               <div className="studio-pillars">
                 <div>
@@ -360,6 +360,36 @@ function App() {
                   <span>Teléfono</span>
                   <a href="tel:+523333682559">+52 333 3682559</a>
                   <a href="tel:+526245677941">+52 624 5677941</a>
+                  <div className="contact-socials">
+                    <a
+                      className="contact-socials__link"
+                      href="https://wa.me/523333682559?text=Hola,%20quiero%20explorar%20la%20posibilidad%20de%20construir%20algo%20extraordinario."
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Escríbenos por WhatsApp"
+                    >
+                      <img
+                        className="contact-socials__icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                        alt="WhatsApp"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a
+                      className="contact-socials__link"
+                      href="https://www.instagram.com/jagarquitectosyconstruccion?igsh=MTEwaDRhMHNoODQ2ZA=="
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Visita nuestro Instagram"
+                    >
+                      <img
+                        className="contact-socials__icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                        alt="Instagram"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
                 </li>
                 <li>
                   <span>Estudio</span>
