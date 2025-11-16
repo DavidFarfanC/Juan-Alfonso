@@ -141,7 +141,7 @@ function App() {
         <div className="brand">
           <img
             className="brand-logo"
-            src="https://res.cloudinary.com/dkucopkow/image/upload/v1762030349/Copia_de_White_and_Black_Corporate_Architecture_Presentation-removebg-preview_pptpt8.png"
+            src="https://res.cloudinary.com/dkucopkow/image/upload/v1763256152/arquitectura_Alfonso_Garcia_iiv2ha.png"
             alt="Juan García Arquitectura"
           />
         </div>
